@@ -219,3 +219,6 @@ label {
   font-size: 150%;
   text-decoration: underline;
 }
+.addthis_toolbox {
+  width: 200px;
+}
