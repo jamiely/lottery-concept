@@ -43,6 +43,10 @@
   margin-bottom: 30px;
 }
 
+.video-ad {
+  text-align: center;
+}
+
 .entry-container > div.entry {
   display: inline-block;
   width: 200px;
@@ -125,4 +129,12 @@
 }
 .section-bottom > div.how > h2 {
   background-color: blue;
+}
+.share {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: xx-large;
+}
+.share > div {
+  display: inline-block;
 }

@@ -27,6 +27,30 @@
           </div>
         </script>           
       </div>
+      
+      <div class="share">
+        <div class="instructions">
+          Share with your friends for more chances to play! 
+        </div>
+        <div class="addthis">
+          <!-- AddThis Button BEGIN -->
+          <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          </div>
+          <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4d23bb943f9f0e37"></script>
+          <!-- AddThis Button END -->
+          
+        </div>
+      </div>
+      
+      <div class="video-ad span-24">
+        <object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/cOS5BaxCtAk?fs=1&amp;hl=en_US&autoplay=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/cOS5BaxCtAk?fs=1&amp;hl=en_US&autoplay=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
+      </div>
+      
       <div class="entry-container span-24">
         <script type="text/x-jquery-tmpl" id="tmplEntry">
           <div class="entry">
@@ -42,6 +66,7 @@
           </div>
         </script>
       </div>
+      
       <div class="section-bottom">
         <div class="play span-8">
           <h2>Play</h2>
