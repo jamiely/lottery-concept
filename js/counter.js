@@ -4,10 +4,14 @@ $(function(){
     $(this).attr('id','num'+i);
   });
 
-  function loadticker(ticnum) {
+  function loadTicker(ticnum) {
     var fticnum = add_commas(ticnum);
-    var numheight = 90;
+    var numheight = 86;
+    
+    // adds a ticker
+
     addticker(fticnum);
+    
     if (ticnum && ticnum !== 0) {
       var s = String(fticnum);
 
@@ -23,7 +27,7 @@ $(function(){
           $(this).animate({ top: nheight+'px'}, 1500 );
         }
         if (nval==','){
-          $(this).animate({ top: '-180px'}, 1500 );
+          $(this).animate({ top: '-850px'}, 1500 );
         }
       });
     }
@@ -32,7 +36,7 @@ $(function(){
     var digitcnt = $(".counter-number").size();
     var nnum = String(newnum).length;
     var digitdiff = Number(nnum - Number(digitcnt));
-    if (digitdiff <0) {
+    if (digitdiff < 0) {
       var ltdig = (Number(nnum)-1);
       $(".counter-number:gt(" + ltdig + ")").remove();
     }
@@ -53,13 +57,14 @@ $(function(){
     return x1 + x2;
   }
 
-  var initialValue = 100;
+  var initialValue = 10000;
 
-  loadticker(initialValue);
-  setInterval(function() {
-    initialValue += Math.random();
-    loadticker(initialValue.toFixed(2));
-  }, 100);
+  loadTicker(initialValue);
+    setInterval(function() {
+      //initialValue += Math.random();
+      initialValue ++;
+      loadTicker(initialValue);
+    }, 1000);
 
-
+  //loadTicker(9999);
 });

@@ -18,25 +18,12 @@ function onYouTubePlayerReady(playerId) {
   });
 
 }
-$(function(){
-  // @@@@@@@@@@
-  // jackpot stuff
-  var initialAmount = 100.01;
-  var renderJackpot = function(value) {
-    $('.jackpot').text('$000000000' + value.toFixed(2));
-  };
-  var updateJackpot = function() {
-    initialAmount = initialAmount + Math.random() / 100;
-    renderJackpot(initialAmount);
-  };
-  updateJackpot();
-  setInterval(updateJackpot, 1000);
-  
+$(function(){  
   var ads = [
     {name: 'MacMall', im: 'macmall.jpg'},
     {name: 'Microsoft', im: 'microsoft.jpg'},
     {name: 'BK', im: 'bk.jpg'},
-    {name: 'CamerasRUs', im: 'camerarus.jpg'},
+    {name: 'CamRUs', im: 'camerarus.jpg'},
     {name: 'Xooter', im: 'xooter.jpg'},
     {name: 'ScoopFun', im: 'scoopfree.jpg'},
     {name: 'Nova', im: 'nova.jpg'},

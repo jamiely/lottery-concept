@@ -10,7 +10,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f5fb', endColorstr='#acc4ea'); /* for IE */
   background: -webkit-gradient(linear, left top, left bottom, from(#f2f5fb), to(#acc4ea)); /* for webkit browsers */
   background: -moz-linear-gradient(top,  #f2f5fb,  #acc4ea); /* for firefox 3.6+ */
-  color: white;
+  color: black;
   font-weight: bold;
   padding: 10px;
   height: 30px;
@@ -26,21 +26,25 @@
   display: inline-block;
 }
 .container.main > h1 > .next-drawing > ul > li > a {
-  color: white;
+  color: black;
 }
 
 .jackpot-container {
   font-weight: bold;
   font-size: xx-large;
   text-align: center;
+  position: relative;
 }
 .jackpot-container > .title {
   text-align: left;
 }
 .jackpot-container >.jackpot {
-  font-size: 40pt;
-  color: green;
-  float: right;
+  font-size: 80px;
+  position: absolute;
+  top: 50px;
+  left: 350px;
+
+  text-align: left;
 }
 .jackpot-container > .indexes {
   float: left;
@@ -122,21 +126,32 @@
   font-size: 60pt;
 }
 .selection {
-
   display: inline-block;
-  width: 60px;
+  width: 65px;
   height: 100px;
   margin: 8px;
-  
+  background: url('../images/selection.png');
+  background-repeat: no-repeat;
+  background-position: center top;
   cursor: pointer;
 }
 .selection > .value {
   border-bottom: 1px black solid;
   font-size: xx-large;
   font-weight: bold;
+  color: white;
+  margin-top:5px;
+}
+.selection > .ad {
+  height: 40px;
+  padding: 10px;
+}
+.selection > .ad > a {
+  color: #333;
 }
 .selection.empty {
   width: 100px;
+  background: none;
 }
 .selection.empty > .value {
   border: none;
@@ -153,7 +168,7 @@
   background: -webkit-gradient(linear, left top, left bottom, from(#f2f5fb), to(#acc4ea)); /* for webkit browsers */
   background: -moz-linear-gradient(top,  #f2f5fb,  #acc4ea); /* for firefox 3.6+ */
   
-  color: white;
+  color: black;
   padding: 10px;
 }
 .share {
@@ -187,15 +202,18 @@ label {
 
 /* counter stuff */
 .counter-wrap {
-  height:90px;
-  overflow:hidden;
+  height: 90px;
+  overflow: hidden;
+  width: 500px;
+  display: inline-block;
 }
-.counter-number {
-  height:198px;
-  width:60px;
-  position:relative;
-  background-image:url(../images/counter_ticker_bg_big.png);
-  float:left;
+.counter-number, .counter-number-fake {
+  height: 950px;
+  width: 57px;
+  position: relative;
+  background-image: url(../images/counter_ticker_bg_high1.png);
+  background-repeat: no-repeat;
+  float: left;
 }
 .container.main > h1 > .next-drawing > ul > li > a.how {
   font-size: 150%;
