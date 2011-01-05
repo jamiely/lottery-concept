@@ -13,16 +13,27 @@ $(function(){
   setInterval(updateJackpot, 1000);
   
   var ads = [
-    {name: 'Apple'},
-    {name: 'Microsoft'},
-    {name: 'Burger King'},
-    {name: 'Camera Warehouse'},
-    {name: 'Xooter'},
-    {name: 'ScoopFun'},
-    {name: 'Nova'},
-    {name: 'Flickr'},
-    {name: 'Cooleon Inc.'}
+    {name: 'MacMall', im: 'macmall.jpg'},
+    {name: 'Microsoft', im: 'microsoft.jpg'},
+    {name: 'Burger King', im: 'bk.jpg'},
+    {name: 'CamerasRUs', im: 'camerarus.jpg'},
+    {name: 'Xooter', im: 'xooter.jpg'},
+    {name: 'ScoopFun', im: 'scoopfree.jpg'},
+    {name: 'Nova', im: 'nova.jpg'},
+    {name: 'Flickr', im: 'flickr.jpg'},
+    {name: 'Cooleon Inc.', im: 'cooleon.jpg'}
   ];
+  
+  // setup entry
+  var entryBoxCount = 8;
+  $('.entry-container').each(function(){
+    var container = $(this),
+      tmplEntry = $('#tmplEntry');
+    
+    for(var i = 0; i < entryBoxCount; i++){
+      tmplEntry.tmpl({}).appendTo(container);
+    }
+  });
   
   // @@@@@@@@@
   // ads
@@ -32,22 +43,30 @@ $(function(){
   var entries = $('input[name=entry]');
   
   var selectNumber = function(evt) {
-    
-    
     var target = $(evt.currentTarget);
     if(!target.is('.selection')) return;
     
-    var value = target.data('value');
-    entries.eq(selectedBox).val(value);
-    
+    var ad = target.data('ad'),
+      value = ad.value,
+      input = entries.eq(selectedBox),
+      entry = input.parents('div.entry');
+      
+    input.val(value);
+    entry.addClass('filled');
+    entry.find('.ad img').attr('src', 'ads/'+(ad.im || 'none.jpg'));
+    //entry.find('.ad img').attr('src', 'ads/apple.jpg');
+     
     selectedBox ++;
+    
+    // set the stuff
     
     // we are done selecting
     if(selectedBox >= entries.size()) {
-      $('.select').fadeOut('slow', function() {
-        $(this).remove();
-        $('.result').show().slideUp();
-      })
+      $('.select').addClass('finished').text('Thanks for entering!')
+        .fadeOut(5000, function() {
+          $(this).remove();
+          $('.result').show().slideUp();
+        });
     }
   };
   
@@ -61,7 +80,7 @@ $(function(){
       var selection = tmplAd.tmpl(ad).appendTo(select),
         link = selection.find('a')
       
-      selection.data('value', ad.value);
+      selection.data('ad', ad);
       selection.click(selectNumber);
     });
     

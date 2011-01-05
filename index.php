@@ -1,7 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/blueprint/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" media="all" />
 	  <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" />
 	  <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]--> 
  
@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="css/blueprint/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
   </head>
   <body>
-    <div class="container showgrid main">
-      <h1>Free Lottery</h1>
+    <div class="container main">
+      <h1>
+        <div class="title">Free Lottery</div>
+        <div class="next-drawing">Next competition starts today at 6:00 PM.</div>
+      </h1>
       <div class="jackpot-container span-24">
         <div class="title">Jackpot</div>
         <div class="jackpot"></div>
@@ -25,10 +28,19 @@
         </script>           
       </div>
       <div class="entry-container span-24">
-        <input type="text" name="entry" readonly="readonly" />
-        <input type="text" name="entry" readonly="readonly" />
-        <input type="text" name="entry" readonly="readonly" />
-        <input type="text" name="entry" readonly="readonly" />
+        <script type="text/x-jquery-tmpl" id="tmplEntry">
+          <div class="entry">
+            <div class="input-container">
+              <input type="text" name="entry" readonly="readonly" />
+            </div>
+            <div class="background"></div>
+            <div class="ad">
+              <a href="javascript:">
+                <img src="afdosfds.png" width="200" height="100" /> 
+              </a>
+            </div>
+          </div>
+        </script>
       </div>
       <div class="section-bottom">
         <div class="play span-8">

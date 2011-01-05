@@ -1,0 +1,128 @@
+*, body, html {
+  font-family: serif;
+}
+
+.container.main {
+  margin-top: 10px;
+}
+.container.main > h1 {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  height: 30px;
+}
+.container.main > h1 > .title {
+  float: left;
+}
+.container.main > h1 > .next-drawing {
+  font-size: x-small;
+  float: right;
+}
+
+.jackpot-container {
+  font-weight: bold;
+  font-size: xx-large;
+  text-align: center;
+}
+.jackpot-container > .title {
+  text-align: left;
+}
+.jackpot {
+  font-size: 80pt;
+  color: green;
+}
+#result {
+  display: none;
+  height: 300px;
+  background-color: blue;
+  font-size: xx-large;
+}
+.entry-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.entry-container > div.entry {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.entry-container > div.entry.filled {
+  height: 240px;
+}
+.entry-container > div.entry > .input-container {
+  height: 50px;
+  
+}
+ 
+.entry-container > div.entry.filled > div.background {
+  height: 80px;
+  background-image: url('black.png');
+  background-repeat: repeat-y;
+  background-position: center top;
+}
+
+.entry-container > div.entry > div.ad {
+  visibility: hidden;
+}
+
+.entry-container > div.entry.filled > div.ad {
+  border: 1px black solid; 
+  visibility: visible;
+}
+
+.entry-container > div.entry > div.ad img {
+  height: 98px;
+  width: 198px;
+}
+
+.entry-container input[name=entry] {
+  font-size: 50pt;
+  height: 80px;
+  width: 100px;
+  text-align: center;
+  border: 1px black solid;
+  cursor: default;
+}
+.select {
+  text-align: center;
+  position: relative;
+}
+.select.finished {
+  font-size: 60pt;
+}
+.selection {
+  border: 2px red solid;
+  display: inline-block;
+  width: 80px;
+  height: 100px;
+  margin: 8px;
+  
+  cursor: pointer;
+}
+.selection > .value {
+  border-bottom: 1px black solid;
+  font-size: xx-large;
+  font-weight: bold;
+}
+.section-bottom > div {
+  font-size: medium;
+}
+.section-bottom > div > h2 {
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+.section-bottom > div.play > h2 {
+  background-color: blue;
+}
+
+.section-bottom > div.win > h2 {
+  background-color: green;
+}
+.section-bottom > div.how > h2 {
+  background-color: blue;
+}
