@@ -34,9 +34,13 @@
 .jackpot-container > .title {
   text-align: left;
 }
-.jackpot {
+.jackpot-container >.jackpot {
   font-size: 40pt;
   color: green;
+  float: right;
+}
+.jackpot-container > .indexes {
+  float: left;
 }
 #result {
   display: none;
@@ -148,4 +152,41 @@
 }
 .share > div {
   display: inline-block;
+}
+
+
+/* login stuff */
+
+.login-container > div:first-child {
+  float: left;
+  border-right: 1px #EEE solid;
+  padding: 20px;
+}
+
+.login-container > div:last-child {
+  float: right;
+}
+label {
+  display: block;
+}
+
+.login-container {
+  font-size: 200%;
+}
+
+/* counter stuff */
+.counter-wrap {
+  height:90px;
+  overflow:hidden;
+}
+.counter-number {
+  height:198px;
+  width:50px;
+  position:relative;
+  background-image:url(../images/counter_ticker_bg_big.png);
+  float:left;
+}
+.container.main > h1 > .next-drawing > ul > li > a.how {
+  font-size: 150%;
+  text-decoration: underline;
 }

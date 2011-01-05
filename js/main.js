@@ -108,7 +108,7 @@ $(function(){
   
   var params = { allowScriptAccess: "always" };
   var atts = { id: "myytplayer" };
-
+  
   
   swfobject.embedSWF(
     "http://www.youtube.com/v/cOS5BaxCtAk?fs=1&amp;hl=en_US&autoplay=1&start=40&enablejsapi=1&playerapiid=ytplayer", 
