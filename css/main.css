@@ -5,7 +5,7 @@
 .container.main {
   margin-top: 10px;
 }
-.container.main > h1 {
+.container.main > .header {
   background-color: #acc4ea;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f5fb', endColorstr='#acc4ea'); /* for IE */
   background: -webkit-gradient(linear, left top, left bottom, from(#f2f5fb), to(#acc4ea)); /* for webkit browsers */
@@ -15,17 +15,17 @@
   padding: 10px;
   height: 30px;
 }
-.container.main > h1 > .title {
+.container.main > .header > h1 {
   float: left;
 }
-.container.main > h1 > .next-drawing {
+.container.main > .header > .next-drawing {
   font-size: medium;
   float: right;
 }
-.container.main > h1 > .next-drawing > ul > li {
+.container.main > .header > .next-drawing > ul > li {
   display: inline-block;
 }
-.container.main > h1 > .next-drawing > ul > li > a {
+.container.main > .header > .next-drawing > ul > li > a {
   color: black;
 }
 
@@ -215,7 +215,7 @@ label {
   background-repeat: no-repeat;
   float: left;
 }
-.container.main > h1 > .next-drawing > ul > li > a.how {
+.container.main > .header > .next-drawing > ul > li > a.how {
   font-size: 150%;
   text-decoration: underline;
 }
