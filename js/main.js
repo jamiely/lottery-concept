@@ -6,6 +6,8 @@ var onYoutubePlayerStateChange = function(newState) {
   }
 };
 
+
+
 function onYouTubePlayerReady(playerId) {
   var el = document.getElementById("myytplayer");
   
@@ -33,17 +35,18 @@ $(function(){
   var ads = [
     {name: 'MacMall', im: 'macmall.jpg'},
     {name: 'Microsoft', im: 'microsoft.jpg'},
-    {name: 'Burger King', im: 'bk.jpg'},
+    {name: 'BK', im: 'bk.jpg'},
     {name: 'CamerasRUs', im: 'camerarus.jpg'},
     {name: 'Xooter', im: 'xooter.jpg'},
     {name: 'ScoopFun', im: 'scoopfree.jpg'},
     {name: 'Nova', im: 'nova.jpg'},
     {name: 'Flickr', im: 'flickr.jpg'},
-    {name: 'Cooleon Inc.', im: 'cooleon.jpg'}
+    {name: 'Cooleon', im: 'cooleon.jpg'},
+    {name: 'MacMall', im: 'macmall.jpg'}
   ];
   
   // setup entry
-  var entryBoxCount = 4;
+  var entryBoxCount = 5;
   $('.entry-container').each(function(){
     var container = $(this),
       tmplEntry = $('#tmplEntry');
@@ -69,11 +72,14 @@ $(function(){
       input = entries.eq(selectedBox),
       entry = input.parents('div.entry');
       
-    input.val(value);
-    entry.addClass('filled');
-    entry.find('.ad img').attr('src', 'ads/'+(ad.im || 'none.jpg'));
-    //entry.find('.ad img').attr('src', 'ads/apple.jpg');
-     
+    //input.val(value);
+    
+
+    entry.find('.input-container').html('<img src="images/numbers/' + value + '.png" />')
+    
+    var img = $('<img src="ads/none.jpg" />').attr('src', 'ads/'+(ad.im || 'none.jpg'));
+    entry.find('.ad > a').html(img);
+
     selectedBox ++;
     
     // set the stuff
@@ -88,13 +94,14 @@ $(function(){
     }
   };
   
+  // selections
   $('.select').each(function() {
     var select = $(this),
       tmplAd = $('#tmplAdText');
       
     $.each(ads, function(i, ad) {
       
-      ad.value = i + 1;
+      ad.value = i;
       var selection = tmplAd.tmpl(ad).appendTo(select),
         link = selection.find('a')
       
@@ -109,15 +116,11 @@ $(function(){
   var params = { allowScriptAccess: "always" };
   var atts = { id: "myytplayer" };
   
-  
+
   swfobject.embedSWF(
     "http://www.youtube.com/v/cOS5BaxCtAk?fs=1&amp;hl=en_US&autoplay=1&start=40&enablejsapi=1&playerapiid=ytplayer", 
     "yt-replace-me", "640", "385", "8", null, null, params, atts);
+    
+  onYoutubePlayerStateChange(0);
   
-  
-  var hideVideo = function() {
-    $('.video-ad').fadeOut();
-  };
-  
-  setTimeout(hideVideo, 49000)
 });
