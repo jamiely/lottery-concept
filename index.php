@@ -12,11 +12,19 @@
     <div class="container main">
       <h1>
         <div class="title">Free Lottery</div>
-        <div class="next-drawing">Next competition starts today at 6:00 PM.</div>
+        <div class="next-drawing">
+          <ul>
+            <li><a href="javascript:">My Account</a></li>
+            <li><a href="javascript:">Sign In</a></li>
+            <li><a href="javascript:">Home</a></li>
+            <li><a href="javascript:">History</a></li>
+          </ul>
+        </div>
       </h1>
       <div class="jackpot-container span-24">
-        <div class="title">Jackpot</div>
+        
         <div class="jackpot"></div>
+        <div class="title">Guess numbers to win...</div>
       </div>
       
       <div class="select span-24">
@@ -28,6 +36,34 @@
         </script>           
       </div>
       
+
+      
+      <div class="video-ad span-24">
+        <div class="video-explanation">
+          Watch this advertisement and you'll enter your guess in a moment.
+        </div>
+        
+        <div id="yt-replace-me"></div>
+        <!--         <object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/cOS5BaxCtAk?fs=1&amp;hl=en_US&autoplay=1&start=40&enablejsapi=1&playerapiid=ytplayer"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/cOS5BaxCtAk?fs=1&amp;hl=en_US&autoplay=1&start=40&enablejsapi=1&playerapiid=ytplayer" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
+                 -->
+      </div>
+      
+      <div class="entry-container span-24">
+        <script type="text/x-jquery-tmpl" id="tmplEntry">
+          <div class="entry">
+            <div class="input-container">
+              <input type="text" name="entry" readonly="readonly" />
+            </div>
+            <div class="background"></div>
+            <div class="ad">
+              <a href="javascript:">
+                <img src="afdosfds.png" width="200" height="100" /> 
+              </a>
+            </div>
+          </div>
+        </script>
+      </div>
+
       <div class="share">
         <div class="instructions">
           Share with your friends for more chances to play! 
@@ -46,27 +82,7 @@
           
         </div>
       </div>
-      
-      <div class="video-ad span-24">
-        <object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/cOS5BaxCtAk?fs=1&amp;hl=en_US&autoplay=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/cOS5BaxCtAk?fs=1&amp;hl=en_US&autoplay=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
-      </div>
-      
-      <div class="entry-container span-24">
-        <script type="text/x-jquery-tmpl" id="tmplEntry">
-          <div class="entry">
-            <div class="input-container">
-              <input type="text" name="entry" readonly="readonly" />
-            </div>
-            <div class="background"></div>
-            <div class="ad">
-              <a href="javascript:">
-                <img src="afdosfds.png" width="200" height="100" /> 
-              </a>
-            </div>
-          </div>
-        </script>
-      </div>
-      
+
       <div class="section-bottom">
         <div class="play span-8">
           <h2>Play</h2>
@@ -97,6 +113,7 @@
     
     <script src="js/jquery-1.4.2.min.js"></script>
     <script src="js/jquery.tmpl.min.js"></script>
+    <script src="js/swfobject.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

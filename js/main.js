@@ -1,3 +1,21 @@
+var onYoutubePlayerStateChange = function(newState) {
+  if(newState == 0) { // stopped
+    $('.video-ad').hide();
+    $('.entry-container').show();
+    $('.select').show();
+  }
+};
+
+function onYouTubePlayerReady(playerId) {
+  var el = document.getElementById("myytplayer");
+  
+  //$('#myytplayer').bind('onStateChange', onYoutubePlayerStateChange);
+  el.addEventListener('onStateChange', 'onYoutubePlayerStateChange');
+  el.addEventListener('onError', function(error) {
+    alert('error: ' + error);
+  });
+
+}
 $(function(){
   // @@@@@@@@@@
   // jackpot stuff
@@ -25,7 +43,7 @@ $(function(){
   ];
   
   // setup entry
-  var entryBoxCount = 8;
+  var entryBoxCount = 4;
   $('.entry-container').each(function(){
     var container = $(this),
       tmplEntry = $('#tmplEntry');
@@ -85,4 +103,21 @@ $(function(){
     });
     
   });
+  
+  // handle the video advertisement
+  
+  var params = { allowScriptAccess: "always" };
+  var atts = { id: "myytplayer" };
+
+  
+  swfobject.embedSWF(
+    "http://www.youtube.com/v/cOS5BaxCtAk?fs=1&amp;hl=en_US&autoplay=1&start=40&enablejsapi=1&playerapiid=ytplayer", 
+    "yt-replace-me", "640", "385", "8", null, null, params, atts);
+  
+  
+  var hideVideo = function() {
+    $('.video-ad').fadeOut();
+  };
+  
+  setTimeout(hideVideo, 49000)
 });

@@ -16,8 +16,14 @@
   float: left;
 }
 .container.main > h1 > .next-drawing {
-  font-size: x-small;
+  font-size: medium;
   float: right;
+}
+.container.main > h1 > .next-drawing > ul > li {
+  display: inline-block;
+}
+.container.main > h1 > .next-drawing > ul > li > a {
+  color: white;
 }
 
 .jackpot-container {
@@ -29,7 +35,7 @@
   text-align: left;
 }
 .jackpot {
-  font-size: 80pt;
+  font-size: 40pt;
   color: green;
 }
 #result {
@@ -42,9 +48,14 @@
   text-align: center;
   margin-bottom: 30px;
 }
+.entry-container, .select {
+  display: none;
+}
 
 .video-ad {
   text-align: center;
+  margin-bottom: 10px;
+  font-size: large;
 }
 
 .entry-container > div.entry {
